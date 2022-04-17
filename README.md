@@ -4,6 +4,8 @@
 
 Angular component that allows the creation of dynamic forms. You can use this component in situations where you get the configuration for the form from an external API or if you just hate HTML 😀
 
+<img src="./form.png" alt="Angular dynamic form img">
+
 ## List of features
 
 > `UI Style` — for UI i used [PrimeNG](https://www.primefaces.org/primeng/#/) but you can use any Angular UI Library.

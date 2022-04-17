@@ -34,7 +34,8 @@ import { fieldsFromApi } from './fields-from-api';
       [form]="formFactory.getFormGroup(exampleForm, 'dynamic')"
       [fields]="exampleFields"
     ></app-form-factory>
-    <pre>{{ formOutput | json }}</pre>`,
+    <pre>{{ formOutput | json }}</pre>
+    `,
 })
 export class FormExampleComponent implements OnInit {
   exampleForm!: FormGroup;
