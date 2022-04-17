@@ -1,0 +1,15 @@
+<div
+  class="field flex flex-column w-full mb-2"
+  [ngClass]="options.containerClass"
+>
+  <label *ngIf="options.label" class="mb-2">{{ options.label }}</label>
+  <input
+    [type]="options.type"
+    [placeholder]="options.placeholder ?? ''"
+    [formControlName]="options.formControlName"
+    (input)="onChange($event)"
+    pInputText
+  />
+
+  <app-field-errors [errors]="errors"></app-field-errors>
+</div>

@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ComponentFactoryResolver,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
+import { InputComponent } from './form-factory/components/form-fields/input/input.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<app-form-example></app-form-example>`,
 })
-export class AppComponent {
-  title = 'angular-dynamic-forms';
-}
+export class AppComponent {}

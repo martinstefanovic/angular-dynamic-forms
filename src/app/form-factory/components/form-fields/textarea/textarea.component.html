@@ -1,0 +1,15 @@
+<div
+  class="field w-full flex flex-column mb-2"
+  [ngClass]="options.containerClass"
+>
+  <label class="mb-2">{{ options.label }}</label>
+  <textarea
+    [rows]="options.rows"
+    [cols]="options.cols"
+    [placeholder]="options.placeholder ?? ''"
+    [formControlName]="options.formControlName"
+    pInputTextarea
+  ></textarea>
+
+  <app-field-errors [errors]="errors"></app-field-errors>
+</div>

@@ -1,0 +1,15 @@
+<div class="field mb-2 w-full" [ngClass]="options.containerClass">
+  <label class="mb-2" *ngIf="options.label">{{ options.label }}</label>
+  <p-dropdown
+    [options]="options.dropdownOptions"
+    [optionLabel]="options.optionLabel"
+    [placeholder]="options.placeholder"
+    [formControlName]="options.formControlName"
+    [optionValue]="options.optionValue"
+    styleClass="w-full"
+    (onChange)="onChangeValue($event)"
+    [showClear]="false"
+  ></p-dropdown>
+
+  <app-field-errors [errors]="errors"></app-field-errors>
+</div>
