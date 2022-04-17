@@ -12,13 +12,21 @@ Angular component that allows the creation of dynamic forms. You can use this co
 - Full gird layout for forms
 - Dummy fields without UI input fields
 - You can group fields in same column
+- Validation error messages
 - Responsive forms
 - 👇 Easy to [add more supported fields](#add-more-fields)
 
+#### Supported fields by default
+
+> You can add more by yourself!
+
+| Field      | Selector / `controlType`   | Description |
+| ---------- | -------------------------- | ----------- |
+| Input      | `input`                    | Text input field.
+| Textarea   | `textarea`                 | Textarea field.
+
 
 ## Installation
-
-### Install via NPM
 
 Clone repo and run:
 
@@ -57,10 +65,10 @@ There are two ways you can use dynamic forms. The first way is if you have no ad
 ```
 
 ```HTML
-<app-form-factory
-  [form]="exampleForm"
-  [fields]="exampleFields"
-></app-form-factory>
+  <app-form-factory
+    [form]="exampleForm"
+    [fields]="exampleFields"
+  ></app-form-factory>
 ```
 
 #### Example 2
@@ -82,40 +90,37 @@ If you want to insert dynamic fields into one control and add the rest of the fi
 ```
 
 ```HTML
-<app-form-factory
-  [form]="formFactory.getFormGroup(exampleForm,'dynamic')"
-  [fields]="exampleFields"
-></app-form-factory>
+  <app-form-factory
+    [form]="formFactory.getFormGroup(exampleForm,'dynamic')"
+    [fields]="exampleFields"
+  ></app-form-factory>
 ```
 
 ## Available configuration
 
-### Enabling / disabling services
+### Enabling / disabling fields
 
-Embed Tool supports some services by default (see above). You can specify services you would like to use:
+This system supports some form fields by default (see above). If you want to specify fields you would like to use you can do that in `form-factory/core/services/form-builder.service.ts`:
 
-```javascript
-var editor = EditorJS({
-  ...
-
-  tools: {
-    ...
-    embed: {
-      class: Embed,
-      config: {
-        services: {
-          youtube: true,
-          coub: true
-        }
-      }
+```typescript
+  private formFields: FieldTypeModel[] = [
+    {
+      type: 'input',
+      component: InputComponent,
     },
-  },
-
-  ...
-});
+    {
+      type: 'textarea',
+      component: TextareaComponent,
+    },
+    ...
+  ];
 ```
 
-> Note that if you pass services you want to use like in the example above, others will not be enabled.
+> Note that if you want you can pass any form field you created like in example above.
+
+> `type` - Selector that you use for `controlType` option in JSON configuration.
+
+> `component` - Angular component
 
 ### Add more services
 
