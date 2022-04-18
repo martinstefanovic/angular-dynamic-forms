@@ -1,4 +1,4 @@
-![](https://badgen.net/badge/Version/1.0/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
+![](https://badgen.net/badge/Version/1.0/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red) ![](https://badgen.net/badge/Last-update/18.4.2022/blue)
 
 # Angular Dynamic Forms
 
@@ -8,7 +8,8 @@ Angular component that allows the creation of dynamic forms. You can use this co
 
 ## List of features
 
-> `UI Style` — for UI i used [PrimeNG](https://www.primefaces.org/primeng/#/) but you can use any Angular UI Library.
+> `UI Style` — for UI I used [PrimeNG](https://www.primefaces.org/primeng/#/) but you can use any Angular UI Library.
+> `Grid layout` — for grid I used [PrimeFLEX](https://www.primefaces.org/primeflex/)
 
 - Dynamically created form only from JSON configuration
 - Full gird layout for forms
@@ -114,19 +115,19 @@ If you want to insert dynamic fields into one control and add the rest of the fi
 
 General config options description:
 
-| Option            | Description                                     |
-| ----------------- | ----------------------------------------------- |
-| `controlType`     | Selector for your form field                    |
-| `colSize`         | Grid layout classes from PrimeNG (Primeflex)    |
-| `options`         | This options is used to create form field       |
-| `containerClass`  | You can add custom CSS class to field container |
-| `label`           | Form field label                                |
-| `placeholder`     | Form field placeholder                          |
-| `formControlName` | Angular reactive forms control name             |
-| `value`           | Default value for form field                    |
-| `disabled`        | Define is field disabled                        |
-| `required`        | Define is field required                        |
-| `maxLength`       | Define field max length                         |
+| Option            | Description                                                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `controlType`     | Selector for your form field                                                                                                  |
+| `colSize`         | Look at primeflex documentation to see all grid layout classes - [PrimeFLEX](https://www.primefaces.org/primeflex/gridsystem) |
+| `options`         | This options is used to create form field                                                                                     |
+| `containerClass`  | You can add custom CSS class to field container                                                                               |
+| `label`           | Form field label                                                                                                              |
+| `placeholder`     | Form field placeholder                                                                                                        |
+| `formControlName` | Angular reactive forms control name                                                                                           |
+| `value`           | Default value for form field                                                                                                  |
+| `disabled`        | Define is field disabled                                                                                                      |
+| `required`        | Define is field required                                                                                                      |
+| `maxLength`       | Define field max length                                                                                                       |
 
 #### `Input` field
 
@@ -227,6 +228,47 @@ General config options description:
     "value": true // Optional
   }
 }
+```
+
+### Group fields in grid layout
+
+This is example configuration from the image at the top of the documentation.
+Use `group` array to pass all the fields you want to be in the same column. Inside group you don't need to define `colSize` option because it is already defined for the whole group.
+
+```json
+fields:FormFactoryModel[] = [
+  {
+  "colSize": "col-12 sm:col-4",
+  "group": [
+    {
+      "controlType": "input",
+      "options": {...}
+    }
+    {
+      "controlType": "input",
+      "options": {...}
+    }
+  ]
+},
+{
+  "colSize": "col-12 sm:col-4",
+  "controlType": "textarea",
+  "options": {...}
+},
+{
+  "colSize": "col-12 sm:col-4",
+  "group": [
+    {
+      "controlType": "dropdown",
+      "options": {...}
+    }
+    {
+      "controlType": "checkbox",
+      "options": {...}
+    }
+  ]
+}
+]
 ```
 
 ### Add more fields
