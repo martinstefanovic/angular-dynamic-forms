@@ -36,17 +36,18 @@ import { FormGroup } from '@angular/forms';
 export class FormFactoryComponent {
   /**
    * @decription
-   * Form builder is a component that works by passing it the json configuration
+   * Form factory is a component that works by passing it the JSON configuration
    * for the formand it itself creates the entire layout of the form and all the fields.
-   * More about form builder system you can find here:
-   * https://martinstefanovic.github.io/#/developer
+   * More about form factory system you can find here:
+   * https://github.com/martinstefanovic/angular-dynamic-forms
    */
 
   /**
-   * * Inputs
+   * Inputs
+   *
    * @form This is main FormGroup
    * @fields All form fields
-   * @styleClass Css classes for main grid container
+   * @styleClass CSS classes for main grid container
    */
   @Input() form!: FormGroup;
   @Input() fields: any;

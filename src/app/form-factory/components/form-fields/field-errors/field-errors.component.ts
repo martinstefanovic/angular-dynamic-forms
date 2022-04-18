@@ -24,7 +24,7 @@ export class FieldErrorsComponent {
   /**
    * @description
    * Extracted logic for showing form control errors.
-   * This component is used inside form builder.
+   * This component is used inside form factory.
    */
 
   /**

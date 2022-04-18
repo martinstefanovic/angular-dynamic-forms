@@ -38,16 +38,9 @@ export class InputComponent {
   onChange(event: Event) {
     const formGroup = this.controlContainer.control as FormGroup;
 
-    if (this.customFormGroup && this.options.fieldFormGroup !== undefined) {
-      this.errors =
-        this.customFormGroup.controls[this.options.formControlName].errors;
-    } else if (
-      this.customFormGroup &&
-      (this.options.fieldFormGroup || this.options.fieldFormGroup == '')
-    ) {
-      this.errors = formGroup.controls[this.options.formControlName].errors;
-    } else {
-      this.errors = formGroup.controls[this.options.formControlName].errors;
+    this.errors = formGroup.controls[this.options.formControlName].errors;
+    if (this.errors) {
+      this.errors.errorMessage = this.options?.errorMessage;
     }
   }
 }

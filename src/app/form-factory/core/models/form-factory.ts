@@ -21,6 +21,7 @@ export class FormFactoryModel {
       // Validators for form field
       required?: boolean;
       maxLength?: number;
+      pattern?: string;
     };
     errorMessage?: string;
     class?: string;
@@ -30,7 +31,6 @@ export class FormFactoryModel {
     dropdownOptions?: any;
     optionValue?: string;
     optionLabel?: string;
-
     id?: number;
     rows?: number | string;
     fieldFormGroup?: string;

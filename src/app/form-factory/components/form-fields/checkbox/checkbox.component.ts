@@ -19,7 +19,6 @@ export class CheckboxComponent {
   /**
    * * General
    * @errors Form control errors
-   * @specificFormGroup Set custom form group
    */
   errors: any = {};
   /**
@@ -39,16 +38,6 @@ export class CheckboxComponent {
   onChange(event: Event) {
     const formGroup = this.controlContainer.control as FormGroup;
 
-    if (this.customFormGroup && this.options.fieldFormGroup !== undefined) {
-      this.errors =
-        this.customFormGroup.controls[this.options.formControlName].errors;
-    } else if (
-      this.customFormGroup &&
-      (this.options.fieldFormGroup || this.options.fieldFormGroup == '')
-    ) {
-      this.errors = formGroup.controls[this.options.formControlName].errors;
-    } else {
-      this.errors = formGroup.controls[this.options.formControlName].errors;
-    }
+    this.errors = formGroup.controls[this.options.formControlName].errors;
   }
 }

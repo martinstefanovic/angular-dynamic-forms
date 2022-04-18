@@ -17,6 +17,9 @@ import { DropdownComponent } from '../../components/form-fields/dropdown/dropdow
   providedIn: 'root',
 })
 export class FormFactoryService {
+  /**
+   * List of default supported form fields
+   */
   private formFields: FieldTypeModel[] = [
     {
       type: 'input',
@@ -40,8 +43,10 @@ export class FormFactoryService {
     @Inject('config') private config: { fields: FieldTypeModel[] },
     private fb: FormBuilder
   ) {
+    /**
+     * Add fields passed through the forRoot({}) configuration
+     */
     this.formFields = this.formFields.concat(config.fields);
-    console.log(this.formFields);
   }
 
   public get fields(): FieldTypeModel[] {
@@ -73,6 +78,11 @@ export class FormFactoryService {
         }
 
         // Add validators to control
+        if (singleField.options?.validators?.pattern) {
+          validators.push(
+            Validators.pattern(singleField.options?.validators?.pattern)
+          );
+        }
         if (singleField.options?.validators?.required) {
           validators.push(Validators.required);
         }

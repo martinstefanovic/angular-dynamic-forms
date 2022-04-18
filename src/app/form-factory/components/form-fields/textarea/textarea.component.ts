@@ -36,5 +36,8 @@ export class TextareaComponent {
   onChange(event: Event) {
     const formGroup = this.controlContainer.control as FormGroup;
     this.errors = formGroup.controls[this.options.formControlName].errors;
+    if (this.errors) {
+      this.errors.errorMessage = this.options?.errorMessage;
+    }
   }
 }

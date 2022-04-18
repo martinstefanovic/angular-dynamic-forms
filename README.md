@@ -9,14 +9,16 @@ Angular component that allows the creation of dynamic forms. You can use this co
 ## List of features
 
 > `UI Style` — for UI I used [PrimeNG](https://www.primefaces.org/primeng/#/) but you can use any Angular UI Library.
+
 > `Grid layout` — for grid I used [PrimeFLEX](https://www.primefaces.org/primeflex/)
 
-- Dynamically created form only from JSON configuration
-- Full gird layout for forms
-- Dummy fields without UI input fields
-- You can group fields in same column
-- Validation error messages
-- Responsive forms
+- 🦾 Dynamically created form only from JSON configuration
+- 😎 Full gird layout for forms
+- 🤖 Dummy fields without UI input fields
+- 🍀 You can group fields in same column
+- 💥 Validation error messages
+- 💥 Custom patterns for field value & custom error messages
+- 🏗 Responsive forms
 - 👇 Easy to [add more supported fields](#add-more-fields)
 
 #### Supported fields by default
@@ -128,6 +130,7 @@ General config options description:
 | `disabled`        | Define is field disabled                                                                                                      |
 | `required`        | Define is field required                                                                                                      |
 | `maxLength`       | Define field max length                                                                                                       |
+| `pattern`         | Regex pattern for field                                                                                                       |
 
 #### `Input` field
 
@@ -230,6 +233,53 @@ General config options description:
 }
 ```
 
+#### Custom `regex` pattern
+
+`errorMessage` - This message will be displayed if pattern not matched.
+
+```json
+{
+  "controlType": "input",
+  "colSize": "col-12 sm:col-4",
+  "options": {
+    ...
+    "errorMessage": "Please enter a number from 1 to 9",
+    "validators": {
+      "pattern": "^[0-9]*$", // Any regex pattern
+      "required": true,
+      "maxLength": 200
+    }
+  }
+}
+```
+
+#### Dummy fields
+
+This fields doesn`t have UI representation, they just exist in angular form builder.
+
+```json
+  [
+  ...
+  {
+    "dummyFields": [
+      {
+        "options": {
+          "formControlName": "dummyField",
+          "value": "Hello!",
+        },
+      },
+      {
+        "options": {
+          "formControlName": "myId",
+          "value": "",
+        },
+      },
+    ],
+  },
+  ...
+  ]
+```
+
 ### Group fields in grid layout
 
 This is example configuration from the image at the top of the documentation.
@@ -308,6 +358,6 @@ If you want to contribute to a project and make it better, your help is very wel
 
 # About me
 
-| Linkedin 👋                                               | Instagram                                        |
-| --------------------------------------------------------- | ------------------------------------------------ |
-| [Linkedin](https://www.linkedin.com/in/martinstefanovic/) | [@maki.stf](https://www.instagram.com/maki.stf/) |
+| Linkedin 👋                                                | Instagram                                        |
+| ---------------------------------------------------------- | ------------------------------------------------ |
+| [Martin S.](https://www.linkedin.com/in/martinstefanovic/) | [@maki.stf](https://www.instagram.com/maki.stf/) |

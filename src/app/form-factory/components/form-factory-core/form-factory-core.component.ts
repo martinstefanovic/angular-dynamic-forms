@@ -16,6 +16,12 @@ import { FormFactoryService } from '../../core/services/form-factory.service';
 })
 export class FormFactoryCoreComponent implements OnInit {
   /**
+   * @description
+   * This component dynamically creates a form field
+   * depending on the field type defined in the configuration
+   */
+
+  /**
    * Form field container
    */
   @ViewChild('appDynamic', { read: ViewContainerRef, static: true })
