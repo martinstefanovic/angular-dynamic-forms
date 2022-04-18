@@ -54,6 +54,36 @@ export const fieldsFromApi: FormFactoryModel[] = [
     },
   },
   {
+    colSize: 'col-12 sm:col-3',
+    group: [
+      {
+        controlType: 'dropdown',
+        options: {
+          label: 'List',
+          placeholder: 'Chose',
+          formControlName: 'listOptions',
+          optionValue: 'value',
+          optionLabel: 'label',
+          dropdownOptions: [
+            {
+              label: 'Item 1',
+              value: 1,
+            },
+          ],
+          value: [],
+        },
+      },
+      {
+        controlType: 'checkbox',
+        options: {
+          label: 'Remember me',
+          formControlName: 'remember',
+          value: true,
+        },
+      },
+    ],
+  },
+  {
     dummyFields: [
       {
         options: {

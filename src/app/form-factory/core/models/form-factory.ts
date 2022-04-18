@@ -1,6 +1,6 @@
 export class FormFactoryModel {
   group?: any[];
-  controlType?: 'input' | 'rich-editor' | 'dropdown' | 'textarea';
+  controlType?: string;
   colSize?: string; // Grid from primeng example: col-12
   dummyFields?: {
     options: {

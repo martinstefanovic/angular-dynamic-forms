@@ -1,0 +1,10 @@
+<div class="checkbox-wrapper">
+  <p-checkbox
+    [binary]="true"
+    [label]="options.label ?? 'Default Option'"
+    [formControlName]="options.formControlName"
+    [value]="options.value ?? true"
+    (onChange)="onChange($event)"
+  >
+  </p-checkbox>
+</div>

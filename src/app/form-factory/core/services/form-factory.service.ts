@@ -1,5 +1,6 @@
-import { FormFactoryModel } from './../models/form-factory';
-import { InputComponent } from './../../components/form-fields/input/input.component';
+import { CheckboxComponent } from './../../components/form-fields/checkbox/checkbox.component';
+import { FormFactoryModel } from '../models/form-factory';
+import { InputComponent } from '../../components/form-fields/input/input.component';
 import {
   FormArray,
   FormBuilder,
@@ -7,14 +8,15 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { TextareaComponent } from '../../components/form-fields/textarea/textarea.component';
 import { FieldTypeModel } from '../models/field-type';
+import { DropdownComponent } from '../../components/form-fields/dropdown/dropdown.component';
 
 @Injectable({
   providedIn: 'root',
 })
-export class FormBuilderService {
+export class FormFactoryService {
   private formFields: FieldTypeModel[] = [
     {
       type: 'input',
@@ -24,9 +26,23 @@ export class FormBuilderService {
       type: 'textarea',
       component: TextareaComponent,
     },
+    {
+      type: 'dropdown',
+      component: DropdownComponent,
+    },
+    {
+      type: 'checkbox',
+      component: CheckboxComponent,
+    },
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    @Inject('config') private config: { fields: FieldTypeModel[] },
+    private fb: FormBuilder
+  ) {
+    this.formFields = this.formFields.concat(config.fields);
+    console.log(this.formFields);
+  }
 
   public get fields(): FieldTypeModel[] {
     return this.formFields;

@@ -1,4 +1,4 @@
-![](https://badgen.net/badge/Angular-Dynamic-Forms/v1.0/f2a)
+![](https://badgen.net/badge/Version/1.0/f2a) ![](https://badgen.net/badge/Open-Source/FREE/red)
 
 # Angular Dynamic Forms
 
@@ -22,11 +22,12 @@ Angular component that allows the creation of dynamic forms. You can use this co
 
 > You can add more by yourself!
 
-| Field      | Selector / `controlType`   | Description |
-| ---------- | -------------------------- | ----------- |
-| Input      | `input`                    | Text input field.
-| Textarea   | `textarea`                 | Textarea field.
-
+| Field    | Selector / `controlType` | Description       |
+| -------- | ------------------------ | ----------------- |
+| Input    | `input`                  | Text input field. |
+| Textarea | `textarea`               | Textarea field.   |
+| Dropdown | `dropdown`               | Dropdown field.   |
+| Checkbox | `checkbox`               | Checkbox field.   |
 
 ## Installation
 
@@ -40,16 +41,25 @@ npm install
 ng serve -o
 ```
 
-
 ## Usage
 
 There are two ways you can use dynamic forms. The first way is if you have no additional controls other than those in the configuration.
 
-#### Example 1 
+### Import module
+
+You can copy the entire form-factory folder into your project and then import `FormFactoryModule` in `app.module.ts`
+
+```typescript
+  FormFactoryModule.forRoot({
+    fields: [],
+  }),
+```
+
+#### Example 1
 
 ```typescript
   constructor(
-    public formFactory: FormBuilderService
+    public formFactory: FormFactoryService
   ) {}
 
   ngOnInit(): void {
@@ -80,7 +90,7 @@ If you want to insert dynamic fields into one control and add the rest of the fi
 ```typescript
   constructor(
     private fb: FormBuilder,
-    public formFactory: FormBuilderService
+    public formFactory: FormFactoryService
   ) {}
 
   ngOnInit(): void {
@@ -100,23 +110,149 @@ If you want to insert dynamic fields into one control and add the rest of the fi
 
 ## Available configuration
 
-### Enabling / disabling fields
+### Configuration for exsisting fields
 
-This system supports some form fields by default (see above). If you want to specify fields you would like to use you can do that in `form-factory/core/services/form-builder.service.ts`:
+General config options description:
+
+| Option            | Description                                     |
+| ----------------- | ----------------------------------------------- |
+| `controlType`     | Selector for your form field                    |
+| `colSize`         | Grid layout classes from PrimeNG (Primeflex)    |
+| `options`         | This options is used to create form field       |
+| `containerClass`  | You can add custom CSS class to field container |
+| `label`           | Form field label                                |
+| `placeholder`     | Form field placeholder                          |
+| `formControlName` | Angular reactive forms control name             |
+| `value`           | Default value for form field                    |
+| `disabled`        | Define is field disabled                        |
+| `required`        | Define is field required                        |
+| `maxLength`       | Define field max length                         |
+
+#### `Input` field
+
+- controlType: `input`
+
+```json
+{
+  "controlType": "input",
+  "colSize": "col-12 sm:col-4",
+  "options": {
+    "containerClass": "mb-0", // Optional
+    "label": "Title",
+    "placeholder": "Enter title", // Optional
+    "formControlName": "title",
+    "value": "", // Optional - default is ''
+    "disabled": false, // Optional
+    "validators": {
+      // Optional
+      "required": true,
+      "maxLength": 200
+    }
+  }
+}
+```
+
+#### `Textarea` field
+
+- controlType: `textarea`
+
+| Option | Description             |
+| ------ | ----------------------- |
+| `rows` | Number of textarea rows |
+
+```json
+{
+  "colSize": "col-12 sm:col-3",
+  "controlType": "textarea",
+  "options": {
+    "containerClass": "mb-0", // Optional
+    "label": "Description",
+    "placeholder": "My description", // Optional
+    "formControlName": "description",
+    "value": "", // Optional - default is ''
+    "rows": 5, // Optional
+    "disabled": false, // Optional
+    "validators": {
+      // Optional
+      "required": true,
+      "maxLength": 200
+    }
+  }
+}
+```
+
+#### `Dropdown` field
+
+- controlType: `dropdown`
+
+| Option            | Description                             |
+| ----------------- | --------------------------------------- |
+| `optionValue`     | The value to be displayed when selected |
+| `optionLabel`     | The label to be displayed when selected |
+| `dropdownOptions` | Array with options                      |
+| `value`           | Default value                           |
+
+```json
+{
+  "colSize": "col-12",
+  "controlType": "dropdown",
+  "options": {
+    "label": "List",
+    "placeholder": "Chose", // Optional
+    "formControlName": "someList",
+    "optionValue": "value",
+    "optionLabel": "label",
+    "dropdownOptions": [
+      {
+        "label": "Item 1",
+        "value": 1
+      }
+    ],
+    "value": []
+  }
+}
+```
+
+#### `Checkbox` field
+
+- controlType: `checkbox`
+
+```json
+{
+  "colSize": "col-12 sm:col-3",
+  "controlType": "checkbox",
+  "options": {
+    "label": "Remember me",
+    "formControlName": "remember",
+    "value": true // Optional
+  }
+}
+```
+
+### Add more fields
+
+This system supports some form fields by default (see above). If you want to add fields you can do that in `forRoot({})` configuration:
 
 ```typescript
-  private formFields: FieldTypeModel[] = [
-    {
-      type: 'input',
-      component: InputComponent,
-    },
-    {
-      type: 'textarea',
-      component: TextareaComponent,
-    },
+  @NgModule({
+    declarations: [...],
+    imports: [
+      ...
+      FormFactoryModule.forRoot({
+        fields: [
+          {
+            type: 'my-custom-field',
+            component: MyCustomFieldComponent
+          }
+        ],
+      }),
+    ],
     ...
-  ];
+  })
+  export class AppModule {}
 ```
+
+> **IMPORTANT** - If you want to add your custom field please open some of exsisting form-fields in `form-factory/components/form-fields` folder and follow the same component structure.
 
 > Note that if you want you can pass any form field you created like in example above.
 
@@ -124,116 +260,12 @@ This system supports some form fields by default (see above). If you want to spe
 
 > `component` - Angular component
 
-### Add more services
+# Contributing
 
-You can provide your own services using simple configuration.
+If you want to contribute to a project and make it better, your help is very welcome. Contributing is also a great way to learn more about social coding on Github, new technologies and and their ecosystems and how to make constructive, helpful bug reports, feature requests and the noblest of all contributions: a good, clean pull request.
 
-First, you should create a Service configuration object. It contains following fields:
+# About me
 
-| Field      | Type       | Description |
-| ---------- | ---------- | ----------- |
-| `regex`    | `RegExp`   | Pattern of pasted URLs. You should use regexp groups to extract resource id
-| `embedUrl` | `string`   | Url of resource\`s embed page. Use `<%= remote_id %>` to substitute resource identifier
-| `html`     | `string`   | HTML code of iframe with embedded content. `embedUrl` will be set as iframe `src`
-| `height`   | `number`   | _Optional_. Height of inserted iframe
-| `width`    | `number`   | _Optional_. Width of inserted iframe
-| `id`       | `Function` | _Optional_. If your id is complex you can provide function to make the id from extraced regexp groups
-
-Example:
-
-```javascript
-{
-  regex: /https?:\/\/codepen.io\/([^\/\?\&]*)\/pen\/([^\/\?\&]*)/,
-  embedUrl: 'https://codepen.io/<%= remote_id %>?height=300&theme-id=0&default-tab=css,result&embed-version=2',
-  html: "<iframe height='300' scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>",
-  height: 300,
-  width: 600,
-  id: (groups) => groups.join('/embed/')
-}
-```
-
-When you create a Service configuration object, you can provide it with Tool\`s configuration:
-
-```javascript
-var editor = EditorJS({
-  ...
-
-  tools: {
-    ...
-    embed: {
-      class: Embed,
-      config: {
-        services: {
-          youtube: true,
-          coub: true,
-          codepen: {
-            regex: /https?:\/\/codepen.io\/([^\/\?\&]*)\/pen\/([^\/\?\&]*)/,
-            embedUrl: 'https://codepen.io/<%= remote_id %>?height=300&theme-id=0&default-tab=css,result&embed-version=2',
-            html: "<iframe height='300' scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>",
-            height: 300,
-            width: 600,
-            id: (groups) => groups.join('/embed/')
-          }
-        }
-      }
-    },
-  },
-
-  ...
-});
-```
-
-#### Inline Toolbar
-Editor.js provides useful inline toolbar. You can allow it\`s usage in the Embed Tool caption by providing `inlineToolbar: true`.
-
-```javascript
-var editor = EditorJS({
-  ...
-
-  tools: {
-    ...
-    embed: {
-      class: Embed,
-      inlineToolbar: true
-    },
-  },
-
-  ...
-});
-```
-
-## Output data
-
-| Field   | Type     | Description
-| ------- | -------- | -----------
-| service | `string` | service unique name
-| source  | `string` | source URL
-| embed   | `string` | URL for source embed page
-| width   | `number` | embedded content width
-| height  | `number` | embedded content height
-| caption | `string` | content caption
-
-
-```json
-{
-  "type" : "embed",
-  "data" : {
-    "service" : "coub",
-    "source" : "https://coub.com/view/1czcdf",
-    "embed" : "https://coub.com/embed/1czcdf",
-    "width" : 580,
-    "height" : 320,
-    "caption" : "My Life"
-  }
-}
-```
-
-# About CodeX
-
-<img align="right" width="120" height="120" src="https://codex.so/public/app/img/codex-logo.svg" hspace="50">
-
-CodeX is a team of digital specialists around the world interested in building high-quality open source products on a global market. We are [open](https://codex.so/join) for young people who want to constantly improve their skills and grow professionally with experiments in cutting-edge technologies.
-
-| 🌐 | Join  👋  | Twitter | Instagram |
-| -- | -- | -- | -- |
-| [codex.so](https://codex.so) | [codex.so/join](https://codex.so/join) |[@codex_team](http://twitter.com/codex_team) | [@codex_team](http://instagram.com/codex_team) |
+| Linkedin 👋                                               | Instagram                                        |
+| --------------------------------------------------------- | ------------------------------------------------ |
+| [Linkedin](https://www.linkedin.com/in/martinstefanovic/) | [@maki.stf](https://www.instagram.com/maki.stf/) |

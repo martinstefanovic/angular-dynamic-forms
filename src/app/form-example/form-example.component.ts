@@ -5,13 +5,14 @@ import {
   Validators,
 } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilderService } from '../form-factory/core/services/form-builder.service';
+import { FormFactoryService } from '../form-factory/core/services/form-factory.service';
 import { FormFactoryModel } from '../form-factory/core/models/form-factory';
 import { fieldsFromApi } from './fields-from-api';
 
 @Component({
   selector: 'app-form-example',
-  template: ` <section>
+  template: `
+    <section>
       <p-button
         styleClass="mb-3"
         label="Submit"
@@ -35,7 +36,7 @@ import { fieldsFromApi } from './fields-from-api';
       [fields]="exampleFields"
     ></app-form-factory>
     <pre>{{ formOutput | json }}</pre>
-    `,
+  `,
 })
 export class FormExampleComponent implements OnInit {
   exampleForm!: FormGroup;
@@ -44,7 +45,7 @@ export class FormExampleComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    public formFactory: FormBuilderService
+    public formFactory: FormFactoryService
   ) {}
 
   ngOnInit(): void {

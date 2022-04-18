@@ -8,7 +8,7 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { FormBuilderService } from '../../core/services/form-builder.service';
+import { FormFactoryService } from '../../core/services/form-factory.service';
 
 @Component({
   selector: 'app-form-factory-core',
@@ -25,7 +25,7 @@ export class FormFactoryCoreComponent implements OnInit {
    */
   @Input() field!: any;
 
-  constructor(private formFactoryService: FormBuilderService) {}
+  constructor(private formFactoryService: FormFactoryService) {}
 
   ngOnInit(): void {
     this.loadComponent();
