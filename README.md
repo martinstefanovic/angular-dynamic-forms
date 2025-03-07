@@ -143,6 +143,7 @@ export default [
     },
   }),
 ];
+```
 
 ## 🛠 Built-in Example Fields & Custom Component Support
 
