@@ -1,0 +1,456 @@
+ui-grid-cols-1
+sm:ui-grid-cols-1
+md:ui-grid-cols-1
+lg:ui-grid-cols-1
+xl:ui-grid-cols-1
+2xl:ui-grid-cols-1
+ui-grid-cols-2
+sm:ui-grid-cols-2
+md:ui-grid-cols-2
+lg:ui-grid-cols-2
+xl:ui-grid-cols-2
+2xl:ui-grid-cols-2
+ui-grid-cols-3
+sm:ui-grid-cols-3
+md:ui-grid-cols-3
+lg:ui-grid-cols-3
+xl:ui-grid-cols-3
+2xl:ui-grid-cols-3
+ui-grid-cols-4
+sm:ui-grid-cols-4
+md:ui-grid-cols-4
+lg:ui-grid-cols-4
+xl:ui-grid-cols-4
+2xl:ui-grid-cols-4
+ui-grid-cols-5
+sm:ui-grid-cols-5
+md:ui-grid-cols-5
+lg:ui-grid-cols-5
+xl:ui-grid-cols-5
+2xl:ui-grid-cols-5
+ui-grid-cols-6
+sm:ui-grid-cols-6
+md:ui-grid-cols-6
+lg:ui-grid-cols-6
+xl:ui-grid-cols-6
+2xl:ui-grid-cols-6
+ui-grid-cols-7
+sm:ui-grid-cols-7
+md:ui-grid-cols-7
+lg:ui-grid-cols-7
+xl:ui-grid-cols-7
+2xl:ui-grid-cols-7
+ui-grid-cols-8
+sm:ui-grid-cols-8
+md:ui-grid-cols-8
+lg:ui-grid-cols-8
+xl:ui-grid-cols-8
+2xl:ui-grid-cols-8
+ui-grid-cols-9
+sm:ui-grid-cols-9
+md:ui-grid-cols-9
+lg:ui-grid-cols-9
+xl:ui-grid-cols-9
+2xl:ui-grid-cols-9
+ui-grid-cols-10
+sm:ui-grid-cols-10
+md:ui-grid-cols-10
+lg:ui-grid-cols-10
+xl:ui-grid-cols-10
+2xl:ui-grid-cols-10
+ui-grid-cols-11
+sm:ui-grid-cols-11
+md:ui-grid-cols-11
+lg:ui-grid-cols-11
+xl:ui-grid-cols-11
+2xl:ui-grid-cols-11
+ui-grid-cols-12
+sm:ui-grid-cols-12
+md:ui-grid-cols-12
+lg:ui-grid-cols-12
+xl:ui-grid-cols-12
+2xl:ui-grid-cols-12
+ui-grid-rows-1
+sm:ui-grid-rows-1
+md:ui-grid-rows-1
+lg:ui-grid-rows-1
+xl:ui-grid-rows-1
+2xl:ui-grid-rows-1
+ui-grid-rows-2
+sm:ui-grid-rows-2
+md:ui-grid-rows-2
+lg:ui-grid-rows-2
+xl:ui-grid-rows-2
+2xl:ui-grid-rows-2
+ui-grid-rows-3
+sm:ui-grid-rows-3
+md:ui-grid-rows-3
+lg:ui-grid-rows-3
+xl:ui-grid-rows-3
+2xl:ui-grid-rows-3
+ui-grid-rows-4
+sm:ui-grid-rows-4
+md:ui-grid-rows-4
+lg:ui-grid-rows-4
+xl:ui-grid-rows-4
+2xl:ui-grid-rows-4
+ui-grid-rows-5
+sm:ui-grid-rows-5
+md:ui-grid-rows-5
+lg:ui-grid-rows-5
+xl:ui-grid-rows-5
+2xl:ui-grid-rows-5
+ui-grid-rows-6
+sm:ui-grid-rows-6
+md:ui-grid-rows-6
+lg:ui-grid-rows-6
+xl:ui-grid-rows-6
+2xl:ui-grid-rows-6
+ui-grid-rows-7
+sm:ui-grid-rows-7
+md:ui-grid-rows-7
+lg:ui-grid-rows-7
+xl:ui-grid-rows-7
+2xl:ui-grid-rows-7
+ui-grid-rows-8
+sm:ui-grid-rows-8
+md:ui-grid-rows-8
+lg:ui-grid-rows-8
+xl:ui-grid-rows-8
+2xl:ui-grid-rows-8
+ui-grid-rows-9
+sm:ui-grid-rows-9
+md:ui-grid-rows-9
+lg:ui-grid-rows-9
+xl:ui-grid-rows-9
+2xl:ui-grid-rows-9
+ui-grid-rows-10
+sm:ui-grid-rows-10
+md:ui-grid-rows-10
+lg:ui-grid-rows-10
+xl:ui-grid-rows-10
+2xl:ui-grid-rows-10
+ui-grid-rows-11
+sm:ui-grid-rows-11
+md:ui-grid-rows-11
+lg:ui-grid-rows-11
+xl:ui-grid-rows-11
+2xl:ui-grid-rows-11
+ui-grid-rows-12
+sm:ui-grid-rows-12
+md:ui-grid-rows-12
+lg:ui-grid-rows-12
+xl:ui-grid-rows-12
+2xl:ui-grid-rows-12
+ui-col-span-1
+sm:ui-col-span-1
+md:ui-col-span-1
+lg:ui-col-span-1
+xl:ui-col-span-1
+2xl:ui-col-span-1
+ui-col-span-2
+sm:ui-col-span-2
+md:ui-col-span-2
+lg:ui-col-span-2
+xl:ui-col-span-2
+2xl:ui-col-span-2
+ui-col-span-3
+sm:ui-col-span-3
+md:ui-col-span-3
+lg:ui-col-span-3
+xl:ui-col-span-3
+2xl:ui-col-span-3
+ui-col-span-4
+sm:ui-col-span-4
+md:ui-col-span-4
+lg:ui-col-span-4
+xl:ui-col-span-4
+2xl:ui-col-span-4
+ui-col-span-5
+sm:ui-col-span-5
+md:ui-col-span-5
+lg:ui-col-span-5
+xl:ui-col-span-5
+2xl:ui-col-span-5
+ui-col-span-6
+sm:ui-col-span-6
+md:ui-col-span-6
+lg:ui-col-span-6
+xl:ui-col-span-6
+2xl:ui-col-span-6
+ui-col-span-7
+sm:ui-col-span-7
+md:ui-col-span-7
+lg:ui-col-span-7
+xl:ui-col-span-7
+2xl:ui-col-span-7
+ui-col-span-8
+sm:ui-col-span-8
+md:ui-col-span-8
+lg:ui-col-span-8
+xl:ui-col-span-8
+2xl:ui-col-span-8
+ui-col-span-9
+sm:ui-col-span-9
+md:ui-col-span-9
+lg:ui-col-span-9
+xl:ui-col-span-9
+2xl:ui-col-span-9
+ui-col-span-10
+sm:ui-col-span-10
+md:ui-col-span-10
+lg:ui-col-span-10
+xl:ui-col-span-10
+2xl:ui-col-span-10
+ui-col-span-11
+sm:ui-col-span-11
+md:ui-col-span-11
+lg:ui-col-span-11
+xl:ui-col-span-11
+2xl:ui-col-span-11
+ui-col-span-12
+sm:ui-col-span-12
+md:ui-col-span-12
+lg:ui-col-span-12
+xl:ui-col-span-12
+2xl:ui-col-span-12
+ui-row-span-1
+sm:ui-row-span-1
+md:ui-row-span-1
+lg:ui-row-span-1
+xl:ui-row-span-1
+2xl:ui-row-span-1
+ui-row-span-2
+sm:ui-row-span-2
+md:ui-row-span-2
+lg:ui-row-span-2
+xl:ui-row-span-2
+2xl:ui-row-span-2
+ui-row-span-3
+sm:ui-row-span-3
+md:ui-row-span-3
+lg:ui-row-span-3
+xl:ui-row-span-3
+2xl:ui-row-span-3
+ui-row-span-4
+sm:ui-row-span-4
+md:ui-row-span-4
+lg:ui-row-span-4
+xl:ui-row-span-4
+2xl:ui-row-span-4
+ui-row-span-5
+sm:ui-row-span-5
+md:ui-row-span-5
+lg:ui-row-span-5
+xl:ui-row-span-5
+2xl:ui-row-span-5
+ui-row-span-6
+sm:ui-row-span-6
+md:ui-row-span-6
+lg:ui-row-span-6
+xl:ui-row-span-6
+2xl:ui-row-span-6
+ui-row-span-7
+sm:ui-row-span-7
+md:ui-row-span-7
+lg:ui-row-span-7
+xl:ui-row-span-7
+2xl:ui-row-span-7
+ui-row-span-8
+sm:ui-row-span-8
+md:ui-row-span-8
+lg:ui-row-span-8
+xl:ui-row-span-8
+2xl:ui-row-span-8
+ui-row-span-9
+sm:ui-row-span-9
+md:ui-row-span-9
+lg:ui-row-span-9
+xl:ui-row-span-9
+2xl:ui-row-span-9
+ui-row-span-10
+sm:ui-row-span-10
+md:ui-row-span-10
+lg:ui-row-span-10
+xl:ui-row-span-10
+2xl:ui-row-span-10
+ui-row-span-11
+sm:ui-row-span-11
+md:ui-row-span-11
+lg:ui-row-span-11
+xl:ui-row-span-11
+2xl:ui-row-span-11
+ui-row-span-12
+sm:ui-row-span-12
+md:ui-row-span-12
+lg:ui-row-span-12
+xl:ui-row-span-12
+2xl:ui-row-span-12
+ui-gap-1 gap-x-1 gap-y-1
+sm:ui-gap-1 gap-x-1 gap-y-1
+md:ui-gap-1 gap-x-1 gap-y-1
+lg:ui-gap-1 gap-x-1 gap-y-1
+xl:ui-gap-1 gap-x-1 gap-y-1
+2xl:ui-gap-1 gap-x-1 gap-y-1
+ui-gap-2 gap-x-2 gap-y-2
+sm:ui-gap-2 gap-x-2 gap-y-2
+md:ui-gap-2 gap-x-2 gap-y-2
+lg:ui-gap-2 gap-x-2 gap-y-2
+xl:ui-gap-2 gap-x-2 gap-y-2
+2xl:ui-gap-2 gap-x-2 gap-y-2
+ui-gap-3 gap-x-3 gap-y-3
+sm:ui-gap-3 gap-x-3 gap-y-3
+md:ui-gap-3 gap-x-3 gap-y-3
+lg:ui-gap-3 gap-x-3 gap-y-3
+xl:ui-gap-3 gap-x-3 gap-y-3
+2xl:ui-gap-3 gap-x-3 gap-y-3
+ui-gap-4 gap-x-4 gap-y-4
+sm:ui-gap-4 gap-x-4 gap-y-4
+md:ui-gap-4 gap-x-4 gap-y-4
+lg:ui-gap-4 gap-x-4 gap-y-4
+xl:ui-gap-4 gap-x-4 gap-y-4
+2xl:ui-gap-4 gap-x-4 gap-y-4
+ui-gap-5 gap-x-5 gap-y-5
+sm:ui-gap-5 gap-x-5 gap-y-5
+md:ui-gap-5 gap-x-5 gap-y-5
+lg:ui-gap-5 gap-x-5 gap-y-5
+xl:ui-gap-5 gap-x-5 gap-y-5
+2xl:ui-gap-5 gap-x-5 gap-y-5
+ui-gap-6 gap-x-6 gap-y-6
+sm:ui-gap-6 gap-x-6 gap-y-6
+md:ui-gap-6 gap-x-6 gap-y-6
+lg:ui-gap-6 gap-x-6 gap-y-6
+xl:ui-gap-6 gap-x-6 gap-y-6
+2xl:ui-gap-6 gap-x-6 gap-y-6
+ui-gap-7 gap-x-7 gap-y-7
+sm:ui-gap-7 gap-x-7 gap-y-7
+md:ui-gap-7 gap-x-7 gap-y-7
+lg:ui-gap-7 gap-x-7 gap-y-7
+xl:ui-gap-7 gap-x-7 gap-y-7
+2xl:ui-gap-7 gap-x-7 gap-y-7
+ui-gap-8 gap-x-8 gap-y-8
+sm:ui-gap-8 gap-x-8 gap-y-8
+md:ui-gap-8 gap-x-8 gap-y-8
+lg:ui-gap-8 gap-x-8 gap-y-8
+xl:ui-gap-8 gap-x-8 gap-y-8
+2xl:ui-gap-8 gap-x-8 gap-y-8
+ui-gap-9 gap-x-9 gap-y-9
+sm:ui-gap-9 gap-x-9 gap-y-9
+md:ui-gap-9 gap-x-9 gap-y-9
+lg:ui-gap-9 gap-x-9 gap-y-9
+xl:ui-gap-9 gap-x-9 gap-y-9
+2xl:ui-gap-9 gap-x-9 gap-y-9
+ui-gap-10 gap-x-10 gap-y-10
+sm:ui-gap-10 gap-x-10 gap-y-10
+md:ui-gap-10 gap-x-10 gap-y-10
+lg:ui-gap-10 gap-x-10 gap-y-10
+xl:ui-gap-10 gap-x-10 gap-y-10
+2xl:ui-gap-10 gap-x-10 gap-y-10
+ui-gap-11 gap-x-11 gap-y-11
+sm:ui-gap-11 gap-x-11 gap-y-11
+md:ui-gap-11 gap-x-11 gap-y-11
+lg:ui-gap-11 gap-x-11 gap-y-11
+xl:ui-gap-11 gap-x-11 gap-y-11
+2xl:ui-gap-11 gap-x-11 gap-y-11
+ui-gap-12 gap-x-12 gap-y-12
+sm:ui-gap-12 gap-x-12 gap-y-12
+md:ui-gap-12 gap-x-12 gap-y-12
+lg:ui-gap-12 gap-x-12 gap-y-12
+xl:ui-gap-12 gap-x-12 gap-y-12
+2xl:ui-gap-12 gap-x-12 gap-y-12
+ui-place-items-start
+sm:ui-place-items-start
+md:ui-place-items-start
+lg:ui-place-items-start
+xl:ui-place-items-start
+2xl:ui-place-items-start
+ui-place-items-center
+sm:ui-place-items-center
+md:ui-place-items-center
+lg:ui-place-items-center
+xl:ui-place-items-center
+2xl:ui-place-items-center
+ui-place-items-end
+sm:ui-place-items-end
+md:ui-place-items-end
+lg:ui-place-items-end
+xl:ui-place-items-end
+2xl:ui-place-items-end
+ui-place-items-stretch
+sm:ui-place-items-stretch
+md:ui-place-items-stretch
+lg:ui-place-items-stretch
+xl:ui-place-items-stretch
+2xl:ui-place-items-stretch
+ui-place-content-start
+sm:ui-place-content-start
+md:ui-place-content-start
+lg:ui-place-content-start
+xl:ui-place-content-start
+2xl:ui-place-content-start
+ui-place-content-center
+sm:ui-place-content-center
+md:ui-place-content-center
+lg:ui-place-content-center
+xl:ui-place-content-center
+2xl:ui-place-content-center
+ui-place-content-end
+sm:ui-place-content-end
+md:ui-place-content-end
+lg:ui-place-content-end
+xl:ui-place-content-end
+2xl:ui-place-content-end
+ui-place-content-between
+sm:ui-place-content-between
+md:ui-place-content-between
+lg:ui-place-content-between
+xl:ui-place-content-between
+2xl:ui-place-content-between
+ui-place-content-around
+sm:ui-place-content-around
+md:ui-place-content-around
+lg:ui-place-content-around
+xl:ui-place-content-around
+2xl:ui-place-content-around
+ui-place-content-evenly
+sm:ui-place-content-evenly
+md:ui-place-content-evenly
+lg:ui-place-content-evenly
+xl:ui-place-content-evenly
+2xl:ui-place-content-evenly
+ui-place-content-stretch
+sm:ui-place-content-stretch
+md:ui-place-content-stretch
+lg:ui-place-content-stretch
+xl:ui-place-content-stretch
+2xl:ui-place-content-stretch
+ui-place-self-auto
+sm:ui-place-self-auto
+md:ui-place-self-auto
+lg:ui-place-self-auto
+xl:ui-place-self-auto
+2xl:ui-place-self-auto
+ui-place-self-start
+sm:ui-place-self-start
+md:ui-place-self-start
+lg:ui-place-self-start
+xl:ui-place-self-start
+2xl:ui-place-self-start
+ui-place-self-center
+sm:ui-place-self-center
+md:ui-place-self-center
+lg:ui-place-self-center
+xl:ui-place-self-center
+2xl:ui-place-self-center
+ui-place-self-end
+sm:ui-place-self-end
+md:ui-place-self-end
+lg:ui-place-self-end
+xl:ui-place-self-end
+2xl:ui-place-self-end
+ui-place-self-stretch
+sm:ui-place-self-stretch
+md:ui-place-self-stretch
+lg:ui-place-self-stretch
+xl:ui-place-self-stretch
+2xl:ui-place-self-stretch

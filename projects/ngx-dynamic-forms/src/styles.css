@@ -1,0 +1,1821 @@
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity))
+}
+
+.ui-absolute {
+  position: absolute
+}
+
+.ui-relative {
+  position: relative
+}
+
+.ui-z-10 {
+  z-index: 10
+}
+
+.ui-col-span-1 {
+  grid-column: span 1 / span 1
+}
+
+.ui-col-span-2 {
+  grid-column: span 2 / span 2
+}
+
+.ui-col-span-3 {
+  grid-column: span 3 / span 3
+}
+
+.ui-col-span-4 {
+  grid-column: span 4 / span 4
+}
+
+.ui-col-span-5 {
+  grid-column: span 5 / span 5
+}
+
+.ui-col-span-6 {
+  grid-column: span 6 / span 6
+}
+
+.ui-col-span-7 {
+  grid-column: span 7 / span 7
+}
+
+.ui-col-span-8 {
+  grid-column: span 8 / span 8
+}
+
+.ui-col-span-9 {
+  grid-column: span 9 / span 9
+}
+
+.ui-col-span-10 {
+  grid-column: span 10 / span 10
+}
+
+.ui-col-span-11 {
+  grid-column: span 11 / span 11
+}
+
+.ui-col-span-12 {
+  grid-column: span 12 / span 12
+}
+
+.ui-row-span-1 {
+  grid-row: span 1 / span 1
+}
+
+.ui-row-span-2 {
+  grid-row: span 2 / span 2
+}
+
+.ui-row-span-3 {
+  grid-row: span 3 / span 3
+}
+
+.ui-row-span-4 {
+  grid-row: span 4 / span 4
+}
+
+.ui-row-span-5 {
+  grid-row: span 5 / span 5
+}
+
+.ui-row-span-6 {
+  grid-row: span 6 / span 6
+}
+
+.ui-mt-1 {
+  margin-top: 0.25rem
+}
+
+.ui-mt-2 {
+  margin-top: 0.5rem
+}
+
+.ui-mb-1 {
+  margin-bottom: 0.25rem
+}
+
+.ui-ml-1 {
+  margin-left: 0.25rem
+}
+
+.ui-ml-2 {
+  margin-left: 0.5rem
+}
+
+.ui-ml-auto {
+  margin-left: auto
+}
+
+.ui-block {
+  display: block
+}
+
+.ui-inline-block {
+  display: inline-block
+}
+
+.ui-flex {
+  display: flex
+}
+
+.ui-inline-flex {
+  display: inline-flex
+}
+
+.ui-grid {
+  display: grid
+}
+
+.ui-h-1 {
+  height: 0.25rem
+}
+
+.ui-h-10 {
+  height: 2.5rem
+}
+
+.ui-w-full {
+  width: 100%
+}
+
+.ui-transform {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.ui-rotate-180 {
+  --tw-rotate: 180deg
+}
+
+@keyframes ui-spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes ui-ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0
+  }
+}
+
+@keyframes ui-pulse {
+  50% {
+    opacity: .5
+  }
+}
+
+@keyframes ui-bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1)
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1)
+  }
+}
+
+.ui-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr))
+}
+
+.ui-grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.ui-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
+.ui-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr))
+}
+
+.ui-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr))
+}
+
+.ui-grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr))
+}
+
+.ui-grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr))
+}
+
+.ui-grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr))
+}
+
+.ui-grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr))
+}
+
+.ui-grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr))
+}
+
+.ui-grid-cols-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr))
+}
+
+.ui-grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr))
+}
+
+.ui-grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr))
+}
+
+.ui-grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr))
+}
+
+.ui-grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr))
+}
+
+.ui-grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr))
+}
+
+.ui-grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr))
+}
+
+.ui-grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr))
+}
+
+.ui-flex-row {
+  flex-direction: row
+}
+
+.ui-place-content-center {
+  place-content: center
+}
+
+.ui-place-content-start {
+  place-content: start
+}
+
+.ui-place-content-end {
+  place-content: end
+}
+
+.ui-place-content-between {
+  place-content: space-between
+}
+
+.ui-place-content-around {
+  place-content: space-around
+}
+
+.ui-place-content-evenly {
+  place-content: space-evenly
+}
+
+.ui-place-content-stretch {
+  place-content: stretch
+}
+
+.ui-place-items-start {
+  place-items: start
+}
+
+.ui-place-items-end {
+  place-items: end
+}
+
+.ui-place-items-center {
+  place-items: center
+}
+
+.ui-place-items-stretch {
+  place-items: stretch
+}
+
+.ui-justify-between {
+  justify-content: space-between
+}
+
+.ui-gap-1 {
+  gap: 0.25rem
+}
+
+.ui-gap-2 {
+  gap: 0.5rem
+}
+
+.ui-gap-3 {
+  gap: 0.75rem
+}
+
+.ui-gap-4 {
+  gap: 1rem
+}
+
+.ui-gap-5 {
+  gap: 1.25rem
+}
+
+.ui-gap-6 {
+  gap: 1.5rem
+}
+
+.ui-gap-7 {
+  gap: 1.75rem
+}
+
+.ui-gap-8 {
+  gap: 2rem
+}
+
+.ui-gap-9 {
+  gap: 2.25rem
+}
+
+.ui-gap-10 {
+  gap: 2.5rem
+}
+
+.ui-gap-11 {
+  gap: 2.75rem
+}
+
+.ui-gap-12 {
+  gap: 3rem
+}
+
+.ui-gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem
+}
+
+.ui-gap-y-2 {
+  row-gap: 0.5rem
+}
+
+.ui-place-self-auto {
+  place-self: auto
+}
+
+.ui-place-self-start {
+  place-self: start
+}
+
+.ui-place-self-end {
+  place-self: end
+}
+
+.ui-place-self-center {
+  place-self: center
+}
+
+.ui-place-self-stretch {
+  place-self: stretch
+}
+
+.ui-rounded-md {
+  border-radius: 0.375rem
+}
+
+.ui-rounded-lg {
+  border-radius: 0.5rem
+}
+
+.ui-border {
+  border-width: 1px
+}
+
+.ui-border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity))
+}
+
+.ui-border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgba(239, 68, 68, var(--tw-border-opacity))
+}
+
+.ui-bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+}
+
+.ui-bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 242, 242, var(--tw-bg-opacity))
+}
+
+.hover\:ui-bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity))
+}
+
+.ui-p-2 {
+  padding: 0.5rem
+}
+
+.ui-px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.ui-py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
+}
+
+.ui-py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
+}
+
+.ui-text-left {
+  text-align: left
+}
+
+.ui-text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem
+}
+
+.ui-text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem
+}
+
+.ui-font-medium {
+  font-weight: 500
+}
+
+.ui-text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity))
+}
+
+.ui-text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity))
+}
+
+.ui-text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, var(--tw-text-opacity))
+}
+
+.ui-opacity-50 {
+  opacity: 0.5
+}
+
+*, ::before, ::after {
+  --tw-shadow: 0 0 #0000
+}
+
+.ui-shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.ui-shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+*, ::before, ::after {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000
+}
+
+.ui-ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
+.ui-ring-gray-200 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(229, 231, 235, var(--tw-ring-opacity))
+}
+
+.ui-ring-gray-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(209, 213, 219, var(--tw-ring-opacity))
+}
+
+.ui-transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+@media (min-width: 640px) {
+  .sm\:ui-col-span-1 {
+    grid-column: span 1 / span 1
+  }
+
+  .sm\:ui-col-span-2 {
+    grid-column: span 2 / span 2
+  }
+
+  .sm\:ui-col-span-3 {
+    grid-column: span 3 / span 3
+  }
+
+  .sm\:ui-col-span-4 {
+    grid-column: span 4 / span 4
+  }
+
+  .sm\:ui-col-span-5 {
+    grid-column: span 5 / span 5
+  }
+
+  .sm\:ui-col-span-6 {
+    grid-column: span 6 / span 6
+  }
+
+  .sm\:ui-col-span-7 {
+    grid-column: span 7 / span 7
+  }
+
+  .sm\:ui-col-span-8 {
+    grid-column: span 8 / span 8
+  }
+
+  .sm\:ui-col-span-9 {
+    grid-column: span 9 / span 9
+  }
+
+  .sm\:ui-col-span-10 {
+    grid-column: span 10 / span 10
+  }
+
+  .sm\:ui-col-span-11 {
+    grid-column: span 11 / span 11
+  }
+
+  .sm\:ui-col-span-12 {
+    grid-column: span 12 / span 12
+  }
+
+  .sm\:ui-row-span-1 {
+    grid-row: span 1 / span 1
+  }
+
+  .sm\:ui-row-span-2 {
+    grid-row: span 2 / span 2
+  }
+
+  .sm\:ui-row-span-3 {
+    grid-row: span 3 / span 3
+  }
+
+  .sm\:ui-row-span-4 {
+    grid-row: span 4 / span 4
+  }
+
+  .sm\:ui-row-span-5 {
+    grid-row: span 5 / span 5
+  }
+
+  .sm\:ui-row-span-6 {
+    grid-row: span 6 / span 6
+  }
+
+  .sm\:ui-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr))
+  }
+
+  .sm\:ui-grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr))
+  }
+
+  .sm\:ui-place-content-center {
+    place-content: center
+  }
+
+  .sm\:ui-place-content-start {
+    place-content: start
+  }
+
+  .sm\:ui-place-content-end {
+    place-content: end
+  }
+
+  .sm\:ui-place-content-between {
+    place-content: space-between
+  }
+
+  .sm\:ui-place-content-around {
+    place-content: space-around
+  }
+
+  .sm\:ui-place-content-evenly {
+    place-content: space-evenly
+  }
+
+  .sm\:ui-place-content-stretch {
+    place-content: stretch
+  }
+
+  .sm\:ui-place-items-start {
+    place-items: start
+  }
+
+  .sm\:ui-place-items-end {
+    place-items: end
+  }
+
+  .sm\:ui-place-items-center {
+    place-items: center
+  }
+
+  .sm\:ui-place-items-stretch {
+    place-items: stretch
+  }
+
+  .sm\:ui-gap-1 {
+    gap: 0.25rem
+  }
+
+  .sm\:ui-gap-2 {
+    gap: 0.5rem
+  }
+
+  .sm\:ui-gap-3 {
+    gap: 0.75rem
+  }
+
+  .sm\:ui-gap-4 {
+    gap: 1rem
+  }
+
+  .sm\:ui-gap-5 {
+    gap: 1.25rem
+  }
+
+  .sm\:ui-gap-6 {
+    gap: 1.5rem
+  }
+
+  .sm\:ui-gap-7 {
+    gap: 1.75rem
+  }
+
+  .sm\:ui-gap-8 {
+    gap: 2rem
+  }
+
+  .sm\:ui-gap-9 {
+    gap: 2.25rem
+  }
+
+  .sm\:ui-gap-10 {
+    gap: 2.5rem
+  }
+
+  .sm\:ui-gap-11 {
+    gap: 2.75rem
+  }
+
+  .sm\:ui-gap-12 {
+    gap: 3rem
+  }
+
+  .sm\:ui-place-self-auto {
+    place-self: auto
+  }
+
+  .sm\:ui-place-self-start {
+    place-self: start
+  }
+
+  .sm\:ui-place-self-end {
+    place-self: end
+  }
+
+  .sm\:ui-place-self-center {
+    place-self: center
+  }
+
+  .sm\:ui-place-self-stretch {
+    place-self: stretch
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:ui-col-span-1 {
+    grid-column: span 1 / span 1
+  }
+
+  .md\:ui-col-span-2 {
+    grid-column: span 2 / span 2
+  }
+
+  .md\:ui-col-span-3 {
+    grid-column: span 3 / span 3
+  }
+
+  .md\:ui-col-span-4 {
+    grid-column: span 4 / span 4
+  }
+
+  .md\:ui-col-span-5 {
+    grid-column: span 5 / span 5
+  }
+
+  .md\:ui-col-span-6 {
+    grid-column: span 6 / span 6
+  }
+
+  .md\:ui-col-span-7 {
+    grid-column: span 7 / span 7
+  }
+
+  .md\:ui-col-span-8 {
+    grid-column: span 8 / span 8
+  }
+
+  .md\:ui-col-span-9 {
+    grid-column: span 9 / span 9
+  }
+
+  .md\:ui-col-span-10 {
+    grid-column: span 10 / span 10
+  }
+
+  .md\:ui-col-span-11 {
+    grid-column: span 11 / span 11
+  }
+
+  .md\:ui-col-span-12 {
+    grid-column: span 12 / span 12
+  }
+
+  .md\:ui-row-span-1 {
+    grid-row: span 1 / span 1
+  }
+
+  .md\:ui-row-span-2 {
+    grid-row: span 2 / span 2
+  }
+
+  .md\:ui-row-span-3 {
+    grid-row: span 3 / span 3
+  }
+
+  .md\:ui-row-span-4 {
+    grid-row: span 4 / span 4
+  }
+
+  .md\:ui-row-span-5 {
+    grid-row: span 5 / span 5
+  }
+
+  .md\:ui-row-span-6 {
+    grid-row: span 6 / span 6
+  }
+
+  .md\:ui-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr))
+  }
+
+  .md\:ui-grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr))
+  }
+
+  .md\:ui-place-content-center {
+    place-content: center
+  }
+
+  .md\:ui-place-content-start {
+    place-content: start
+  }
+
+  .md\:ui-place-content-end {
+    place-content: end
+  }
+
+  .md\:ui-place-content-between {
+    place-content: space-between
+  }
+
+  .md\:ui-place-content-around {
+    place-content: space-around
+  }
+
+  .md\:ui-place-content-evenly {
+    place-content: space-evenly
+  }
+
+  .md\:ui-place-content-stretch {
+    place-content: stretch
+  }
+
+  .md\:ui-place-items-start {
+    place-items: start
+  }
+
+  .md\:ui-place-items-end {
+    place-items: end
+  }
+
+  .md\:ui-place-items-center {
+    place-items: center
+  }
+
+  .md\:ui-place-items-stretch {
+    place-items: stretch
+  }
+
+  .md\:ui-gap-1 {
+    gap: 0.25rem
+  }
+
+  .md\:ui-gap-2 {
+    gap: 0.5rem
+  }
+
+  .md\:ui-gap-3 {
+    gap: 0.75rem
+  }
+
+  .md\:ui-gap-4 {
+    gap: 1rem
+  }
+
+  .md\:ui-gap-5 {
+    gap: 1.25rem
+  }
+
+  .md\:ui-gap-6 {
+    gap: 1.5rem
+  }
+
+  .md\:ui-gap-7 {
+    gap: 1.75rem
+  }
+
+  .md\:ui-gap-8 {
+    gap: 2rem
+  }
+
+  .md\:ui-gap-9 {
+    gap: 2.25rem
+  }
+
+  .md\:ui-gap-10 {
+    gap: 2.5rem
+  }
+
+  .md\:ui-gap-11 {
+    gap: 2.75rem
+  }
+
+  .md\:ui-gap-12 {
+    gap: 3rem
+  }
+
+  .md\:ui-place-self-auto {
+    place-self: auto
+  }
+
+  .md\:ui-place-self-start {
+    place-self: start
+  }
+
+  .md\:ui-place-self-end {
+    place-self: end
+  }
+
+  .md\:ui-place-self-center {
+    place-self: center
+  }
+
+  .md\:ui-place-self-stretch {
+    place-self: stretch
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:ui-col-span-1 {
+    grid-column: span 1 / span 1
+  }
+
+  .lg\:ui-col-span-2 {
+    grid-column: span 2 / span 2
+  }
+
+  .lg\:ui-col-span-3 {
+    grid-column: span 3 / span 3
+  }
+
+  .lg\:ui-col-span-4 {
+    grid-column: span 4 / span 4
+  }
+
+  .lg\:ui-col-span-5 {
+    grid-column: span 5 / span 5
+  }
+
+  .lg\:ui-col-span-6 {
+    grid-column: span 6 / span 6
+  }
+
+  .lg\:ui-col-span-7 {
+    grid-column: span 7 / span 7
+  }
+
+  .lg\:ui-col-span-8 {
+    grid-column: span 8 / span 8
+  }
+
+  .lg\:ui-col-span-9 {
+    grid-column: span 9 / span 9
+  }
+
+  .lg\:ui-col-span-10 {
+    grid-column: span 10 / span 10
+  }
+
+  .lg\:ui-col-span-11 {
+    grid-column: span 11 / span 11
+  }
+
+  .lg\:ui-col-span-12 {
+    grid-column: span 12 / span 12
+  }
+
+  .lg\:ui-row-span-1 {
+    grid-row: span 1 / span 1
+  }
+
+  .lg\:ui-row-span-2 {
+    grid-row: span 2 / span 2
+  }
+
+  .lg\:ui-row-span-3 {
+    grid-row: span 3 / span 3
+  }
+
+  .lg\:ui-row-span-4 {
+    grid-row: span 4 / span 4
+  }
+
+  .lg\:ui-row-span-5 {
+    grid-row: span 5 / span 5
+  }
+
+  .lg\:ui-row-span-6 {
+    grid-row: span 6 / span 6
+  }
+
+  .lg\:ui-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr))
+  }
+
+  .lg\:ui-grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr))
+  }
+
+  .lg\:ui-place-content-center {
+    place-content: center
+  }
+
+  .lg\:ui-place-content-start {
+    place-content: start
+  }
+
+  .lg\:ui-place-content-end {
+    place-content: end
+  }
+
+  .lg\:ui-place-content-between {
+    place-content: space-between
+  }
+
+  .lg\:ui-place-content-around {
+    place-content: space-around
+  }
+
+  .lg\:ui-place-content-evenly {
+    place-content: space-evenly
+  }
+
+  .lg\:ui-place-content-stretch {
+    place-content: stretch
+  }
+
+  .lg\:ui-place-items-start {
+    place-items: start
+  }
+
+  .lg\:ui-place-items-end {
+    place-items: end
+  }
+
+  .lg\:ui-place-items-center {
+    place-items: center
+  }
+
+  .lg\:ui-place-items-stretch {
+    place-items: stretch
+  }
+
+  .lg\:ui-gap-1 {
+    gap: 0.25rem
+  }
+
+  .lg\:ui-gap-2 {
+    gap: 0.5rem
+  }
+
+  .lg\:ui-gap-3 {
+    gap: 0.75rem
+  }
+
+  .lg\:ui-gap-4 {
+    gap: 1rem
+  }
+
+  .lg\:ui-gap-5 {
+    gap: 1.25rem
+  }
+
+  .lg\:ui-gap-6 {
+    gap: 1.5rem
+  }
+
+  .lg\:ui-gap-7 {
+    gap: 1.75rem
+  }
+
+  .lg\:ui-gap-8 {
+    gap: 2rem
+  }
+
+  .lg\:ui-gap-9 {
+    gap: 2.25rem
+  }
+
+  .lg\:ui-gap-10 {
+    gap: 2.5rem
+  }
+
+  .lg\:ui-gap-11 {
+    gap: 2.75rem
+  }
+
+  .lg\:ui-gap-12 {
+    gap: 3rem
+  }
+
+  .lg\:ui-place-self-auto {
+    place-self: auto
+  }
+
+  .lg\:ui-place-self-start {
+    place-self: start
+  }
+
+  .lg\:ui-place-self-end {
+    place-self: end
+  }
+
+  .lg\:ui-place-self-center {
+    place-self: center
+  }
+
+  .lg\:ui-place-self-stretch {
+    place-self: stretch
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:ui-col-span-1 {
+    grid-column: span 1 / span 1
+  }
+
+  .xl\:ui-col-span-2 {
+    grid-column: span 2 / span 2
+  }
+
+  .xl\:ui-col-span-3 {
+    grid-column: span 3 / span 3
+  }
+
+  .xl\:ui-col-span-4 {
+    grid-column: span 4 / span 4
+  }
+
+  .xl\:ui-col-span-5 {
+    grid-column: span 5 / span 5
+  }
+
+  .xl\:ui-col-span-6 {
+    grid-column: span 6 / span 6
+  }
+
+  .xl\:ui-col-span-7 {
+    grid-column: span 7 / span 7
+  }
+
+  .xl\:ui-col-span-8 {
+    grid-column: span 8 / span 8
+  }
+
+  .xl\:ui-col-span-9 {
+    grid-column: span 9 / span 9
+  }
+
+  .xl\:ui-col-span-10 {
+    grid-column: span 10 / span 10
+  }
+
+  .xl\:ui-col-span-11 {
+    grid-column: span 11 / span 11
+  }
+
+  .xl\:ui-col-span-12 {
+    grid-column: span 12 / span 12
+  }
+
+  .xl\:ui-row-span-1 {
+    grid-row: span 1 / span 1
+  }
+
+  .xl\:ui-row-span-2 {
+    grid-row: span 2 / span 2
+  }
+
+  .xl\:ui-row-span-3 {
+    grid-row: span 3 / span 3
+  }
+
+  .xl\:ui-row-span-4 {
+    grid-row: span 4 / span 4
+  }
+
+  .xl\:ui-row-span-5 {
+    grid-row: span 5 / span 5
+  }
+
+  .xl\:ui-row-span-6 {
+    grid-row: span 6 / span 6
+  }
+
+  .xl\:ui-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr))
+  }
+
+  .xl\:ui-grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr))
+  }
+
+  .xl\:ui-place-content-center {
+    place-content: center
+  }
+
+  .xl\:ui-place-content-start {
+    place-content: start
+  }
+
+  .xl\:ui-place-content-end {
+    place-content: end
+  }
+
+  .xl\:ui-place-content-between {
+    place-content: space-between
+  }
+
+  .xl\:ui-place-content-around {
+    place-content: space-around
+  }
+
+  .xl\:ui-place-content-evenly {
+    place-content: space-evenly
+  }
+
+  .xl\:ui-place-content-stretch {
+    place-content: stretch
+  }
+
+  .xl\:ui-place-items-start {
+    place-items: start
+  }
+
+  .xl\:ui-place-items-end {
+    place-items: end
+  }
+
+  .xl\:ui-place-items-center {
+    place-items: center
+  }
+
+  .xl\:ui-place-items-stretch {
+    place-items: stretch
+  }
+
+  .xl\:ui-gap-1 {
+    gap: 0.25rem
+  }
+
+  .xl\:ui-gap-2 {
+    gap: 0.5rem
+  }
+
+  .xl\:ui-gap-3 {
+    gap: 0.75rem
+  }
+
+  .xl\:ui-gap-4 {
+    gap: 1rem
+  }
+
+  .xl\:ui-gap-5 {
+    gap: 1.25rem
+  }
+
+  .xl\:ui-gap-6 {
+    gap: 1.5rem
+  }
+
+  .xl\:ui-gap-7 {
+    gap: 1.75rem
+  }
+
+  .xl\:ui-gap-8 {
+    gap: 2rem
+  }
+
+  .xl\:ui-gap-9 {
+    gap: 2.25rem
+  }
+
+  .xl\:ui-gap-10 {
+    gap: 2.5rem
+  }
+
+  .xl\:ui-gap-11 {
+    gap: 2.75rem
+  }
+
+  .xl\:ui-gap-12 {
+    gap: 3rem
+  }
+
+  .xl\:ui-place-self-auto {
+    place-self: auto
+  }
+
+  .xl\:ui-place-self-start {
+    place-self: start
+  }
+
+  .xl\:ui-place-self-end {
+    place-self: end
+  }
+
+  .xl\:ui-place-self-center {
+    place-self: center
+  }
+
+  .xl\:ui-place-self-stretch {
+    place-self: stretch
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:ui-col-span-1 {
+    grid-column: span 1 / span 1
+  }
+
+  .\32xl\:ui-col-span-2 {
+    grid-column: span 2 / span 2
+  }
+
+  .\32xl\:ui-col-span-3 {
+    grid-column: span 3 / span 3
+  }
+
+  .\32xl\:ui-col-span-4 {
+    grid-column: span 4 / span 4
+  }
+
+  .\32xl\:ui-col-span-5 {
+    grid-column: span 5 / span 5
+  }
+
+  .\32xl\:ui-col-span-6 {
+    grid-column: span 6 / span 6
+  }
+
+  .\32xl\:ui-col-span-7 {
+    grid-column: span 7 / span 7
+  }
+
+  .\32xl\:ui-col-span-8 {
+    grid-column: span 8 / span 8
+  }
+
+  .\32xl\:ui-col-span-9 {
+    grid-column: span 9 / span 9
+  }
+
+  .\32xl\:ui-col-span-10 {
+    grid-column: span 10 / span 10
+  }
+
+  .\32xl\:ui-col-span-11 {
+    grid-column: span 11 / span 11
+  }
+
+  .\32xl\:ui-col-span-12 {
+    grid-column: span 12 / span 12
+  }
+
+  .\32xl\:ui-row-span-1 {
+    grid-row: span 1 / span 1
+  }
+
+  .\32xl\:ui-row-span-2 {
+    grid-row: span 2 / span 2
+  }
+
+  .\32xl\:ui-row-span-3 {
+    grid-row: span 3 / span 3
+  }
+
+  .\32xl\:ui-row-span-4 {
+    grid-row: span 4 / span 4
+  }
+
+  .\32xl\:ui-row-span-5 {
+    grid-row: span 5 / span 5
+  }
+
+  .\32xl\:ui-row-span-6 {
+    grid-row: span 6 / span 6
+  }
+
+  .\32xl\:ui-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr))
+  }
+
+  .\32xl\:ui-place-content-center {
+    place-content: center
+  }
+
+  .\32xl\:ui-place-content-start {
+    place-content: start
+  }
+
+  .\32xl\:ui-place-content-end {
+    place-content: end
+  }
+
+  .\32xl\:ui-place-content-between {
+    place-content: space-between
+  }
+
+  .\32xl\:ui-place-content-around {
+    place-content: space-around
+  }
+
+  .\32xl\:ui-place-content-evenly {
+    place-content: space-evenly
+  }
+
+  .\32xl\:ui-place-content-stretch {
+    place-content: stretch
+  }
+
+  .\32xl\:ui-place-items-start {
+    place-items: start
+  }
+
+  .\32xl\:ui-place-items-end {
+    place-items: end
+  }
+
+  .\32xl\:ui-place-items-center {
+    place-items: center
+  }
+
+  .\32xl\:ui-place-items-stretch {
+    place-items: stretch
+  }
+
+  .\32xl\:ui-gap-1 {
+    gap: 0.25rem
+  }
+
+  .\32xl\:ui-gap-2 {
+    gap: 0.5rem
+  }
+
+  .\32xl\:ui-gap-3 {
+    gap: 0.75rem
+  }
+
+  .\32xl\:ui-gap-4 {
+    gap: 1rem
+  }
+
+  .\32xl\:ui-gap-5 {
+    gap: 1.25rem
+  }
+
+  .\32xl\:ui-gap-6 {
+    gap: 1.5rem
+  }
+
+  .\32xl\:ui-gap-7 {
+    gap: 1.75rem
+  }
+
+  .\32xl\:ui-gap-8 {
+    gap: 2rem
+  }
+
+  .\32xl\:ui-gap-9 {
+    gap: 2.25rem
+  }
+
+  .\32xl\:ui-gap-10 {
+    gap: 2.5rem
+  }
+
+  .\32xl\:ui-gap-11 {
+    gap: 2.75rem
+  }
+
+  .\32xl\:ui-gap-12 {
+    gap: 3rem
+  }
+
+  .\32xl\:ui-place-self-auto {
+    place-self: auto
+  }
+
+  .\32xl\:ui-place-self-start {
+    place-self: start
+  }
+
+  .\32xl\:ui-place-self-end {
+    place-self: end
+  }
+
+  .\32xl\:ui-place-self-center {
+    place-self: center
+  }
+
+  .\32xl\:ui-place-self-stretch {
+    place-self: stretch
+  }
+}
