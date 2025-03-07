@@ -124,7 +124,7 @@ To keep the form configuration modular and reusable, define the form fields in a
 
 Create a file named `json-form-example.ts` and add the following:
 
-````typescript
+```typescript
 import { Validators } from '@angular/forms';
 import { createField, InputField } from 'ngx-dynamic-forms-factory';
 
@@ -154,24 +154,24 @@ If you want to **add your own custom components**, you can check out the example
 
 This guide explains how to create and register **custom form components** to extend the functionality of `ngx-dynamic-forms-factory`.
 
-
 ## 📌 Field Types and Examples
 
 The `createField` function is used to create form fields based on different interfaces. Below is a table of available field types and their descriptions.
 
-| **Interface**     | **Description** |
-|------------------|----------------|
-| **`InputField`** | EXAMPLE FIELD! Standard text input field with validation and placeholder. |
-| **`SelectField`** | EXAMPLE FIELD! Dropdown select field with predefined options. |
-| **`UIElement`** | Used to insert a custom UI component into the form. |
-| **`FieldGroup`** | Groups multiple fields together in a single column in the grid layout. |
-| **`GenericField`** | Base interface for extending and creating custom fields. |
+| **Interface**      | **Description**                                                           |
+| ------------------ | ------------------------------------------------------------------------- |
+| **`InputField`**   | EXAMPLE FIELD! Standard text input field with validation and placeholder. |
+| **`SelectField`**  | EXAMPLE FIELD! Dropdown select field with predefined options.             |
+| **`UIElement`**    | Used to insert a custom UI component into the form.                       |
+| **`FieldGroup`**   | Groups multiple fields together in a single column in the grid layout.    |
+| **`GenericField`** | Base interface for extending and creating custom fields.                  |
 
 ---
 
 ### **🔹 Example Usage of Each Field Type**
 
 #### **📌 InputField**
+
 ```typescript
 import { Validators } from '@angular/forms';
 import { createField, InputField } from 'ngx-dynamic-forms-factory';
@@ -188,7 +188,7 @@ createField<InputField>({
     validators: [Validators.required, Validators.minLength(3)],
   },
 });
-````
+```
 
 #### **📌 SelectField**
 
