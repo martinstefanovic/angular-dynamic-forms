@@ -1,3 +1,24 @@
+## 📚 Table of Contents
+
+- [✅ Key Features](#-key-features)
+- [📦 Installation](#-installation)
+- [📌 Example Usage](#-example-usage)
+- [🚀 Usage](#-usage)
+  - [1️⃣ Add Styles to `angular.json`](#1️⃣-add-styles-to-angularjson)
+  - [2️⃣ Basic Example of Usage](#2️⃣-basic-example-of-usage)
+- [🌐 Using Aliases for Server-Provided JSON Configuration](#-using-aliases-for-server-provided-json-configuration)
+  - [🔹 Example](#-example)
+  - [🛠 Registering Aliases in `app.config.ts`](#-registering-aliases-in-appconfigts)
+- [📄 Defining Form Fields in an External File](#-defining-form-fields-in-an-external-file)
+- [🛠 Built-in Example Fields & Custom Component Support](#-built-in-example-fields--custom-component-support)
+- [📌 Field Types and Examples](#-field-types-and-examples)
+  - [🔹 Example Usage of Each Field Type](#-example-usage-of-each-field-type)
+  - [📌 InputField](#-inputfield)
+  - [📌 SelectField](#-selectfield)
+  - [📌 UIElement](#-uielement)
+  - [📌 FieldGroup](#-fieldgroup)
+  - [📌 GenericField](#-genericfield)
+
 ## ✅ Key Features
 
 - 🔹 **Dynamic Form Rendering** – Generate Angular forms dynamically from JSON configuration.
@@ -20,6 +41,12 @@ To install **ngx-dynamic-forms-factory**, run the following command in your Angu
 ```sh
 npm install ngx-dynamic-forms-factory
 ```
+
+## 📌 Example Usage
+
+For a complete example of how to use **ngx-dynamic-forms-factory** in a real-world scenario, check out the example project:
+
+🔗 **[Example Usage](https://github.com/martinstefanovic/angular-dynamic-forms/tree/master/projects/examples/src/app)**
 
 ## 🚀 Usage
 
@@ -150,7 +177,7 @@ export default [
 This library provides **two example field components** intended for **testing and demonstration purposes**.
 
 If you want to **add your own custom components**, you can check out the example implementation here:
-🔗 **[Custom Components Guide](https://github.com/martinstefanovic/angular-dynamic-forms/tree/master/projects/examples/src/app/components)**
+🔗 **[Custom Components Example](https://github.com/martinstefanovic/angular-dynamic-forms/tree/master/projects/examples/src/app/components/input-password)**
 
 This guide explains how to create and register **custom form components** to extend the functionality of `ngx-dynamic-forms-factory`.
 
@@ -176,18 +203,21 @@ The `createField` function is used to create form fields based on different inte
 import { Validators } from '@angular/forms';
 import { createField, InputField } from 'ngx-dynamic-forms-factory';
 
-createField<InputField>({
-  colSize: 'ui-col-span-12 sm:ui-col-span-4',
-  controlType: InputField,
-  label: 'Name',
-  placeholder: 'Enter name',
-  type: 'text',
-  options: {
-    formControlName: 'name',
-    value: '',
-    validators: [Validators.required, Validators.minLength(3)],
-  },
-});
+[
+    createField<InputField>({
+    colSize: 'ui-col-span-12 sm:ui-col-span-4',
+    controlType: InputField,
+    label: 'Name',
+    placeholder: 'Enter name',
+    type: 'text',
+    options: {
+        formControlName: 'name',
+        value: '',
+        validators: [Validators.required, Validators.minLength(3)],
+    },
+    });
+    ... // Other fields
+]
 ```
 
 #### **📌 SelectField**
@@ -195,22 +225,25 @@ createField<InputField>({
 ```typescript
 import { createField, SelectField } from 'ngx-dynamic-forms-factory';
 
-createField<SelectField>({
-  colSize: 'ui-col-span-12 sm:ui-col-span-4',
-  controlType: SelectField,
-  label: 'Country',
-  selectOptions: [
-    { id: 'us', name: 'United States' },
-    { id: 'ca', name: 'Canada' },
-  ],
-  selectValue: 'id',
-  selectLabel: 'name',
-  options: {
-    formControlName: 'country',
-    value: '',
-    validators: [],
-  },
-});
+[
+    createField<SelectField>({
+    colSize: 'ui-col-span-12 sm:ui-col-span-4',
+    controlType: SelectField,
+    label: 'Country',
+    selectOptions: [
+        { id: 'us', name: 'United States' },
+        { id: 'ca', name: 'Canada' },
+    ],
+    selectValue: 'id',
+    selectLabel: 'name',
+    options: {
+        formControlName: 'country',
+        value: '',
+        validators: [],
+    },
+    });
+    ... // Other fields
+]
 ```
 
 #### **📌 UIElement**
@@ -219,11 +252,14 @@ createField<SelectField>({
 import { createField, UIElement } from 'ngx-dynamic-forms-factory';
 import { CustomTitleComponent } from './custom-title.component';
 
-createField<UIElement>({
-  colSize: 'ui-col-span-12',
-  controlType: CustomTitleComponent,
-  data: { title: 'Personal Information' },
-});
+[
+    createField<UIElement>({
+    colSize: 'ui-col-span-12',
+    controlType: CustomTitleComponent,
+    data: { title: 'Personal Information' },
+    })
+    ... // Other fields
+]
 ```
 
 #### **📌 FieldGroup**
@@ -231,24 +267,27 @@ createField<UIElement>({
 ```typescript
 import { createField, FieldGroup, InputField } from 'ngx-dynamic-forms-factory';
 
-createField<FieldGroup>({
-  colSize: 'ui-col-span-12 sm:ui-col-span-4',
-  group: [
-    createField<InputField>({
-      colSize: 'ui-col-span-12',
-      controlType: InputField,
-      label: 'Email',
-      placeholder: 'example@email.com',
-      type: 'email',
-      options: {
-        formControlName: 'email',
-        value: '',
-        validators: [Validators.email, Validators.required],
-      },
-    }),
+[
+    createField<FieldGroup>({
+    colSize: 'ui-col-span-12 sm:ui-col-span-4',
+    group: [
+        createField<InputField>({
+        colSize: 'ui-col-span-12',
+        controlType: InputField,
+        label: 'Email',
+        placeholder: 'example@email.com',
+        type: 'email',
+        options: {
+            formControlName: 'email',
+            value: '',
+            validators: [Validators.email, Validators.required],
+        },
+        }),
+        ... // Other fields
+    ],
+    })
     ... // Other fields
-  ],
-});
+]
 ```
 
 #### **📌 GenericField**
