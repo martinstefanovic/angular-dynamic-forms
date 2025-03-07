@@ -8,13 +8,33 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [FormFactoryComponent, CommonModule],
+  styles: `
+  main{
+    padding: 2rem;
+  }
+  .button{
+    padding: .8rem 1.3rem;
+    border: none;
+    background-color: #18181b;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  pre{
+    border-radius: 6px;
+    padding:1rem;
+    background-color: oklch(0.967 0.003 264.542);
+    margin: 1rem 2rem 2rem 2rem;
+  }
+  `,
   template: `
-    <section class="p-10">
-      <button class="mb-4" (click)="patchForm()">Populate form</button>
+    <main>
+      <button class="button" (click)="patchForm()">Patch form</button>
       <ngx-form-factory [form]="form" [formFields]="formFields()" />
-    </section>
+    </main>
 
-    <pre class="bg-gray-200 p-4"
+    <pre
       >{{ form.getRawValue() | json }}
 </pre>
   `,

@@ -10,6 +10,8 @@ import {
   SelectField,
   UIElement,
 } from 'ngx-dynamic-forms';
+import { InputPasswordComponent } from './components/input-password/input-password.component';
+import { InputPasswordField } from './components/input-password/input-password-field.interface';
 
 export default [
   createField<InputField>({
@@ -28,13 +30,6 @@ export default [
   createField<FieldGroup>({
     colSize: 'ui-col-span-12 sm:ui-col-span-4',
     group: [
-      createField<UIElement>({
-        colSize: 'ui-col-span-12',
-        controlType: TitleComponent,
-        data: {
-          title: 'Contact information',
-        },
-      }),
       createField<InputField>({
         colSize: 'ui-col-span-12',
         controlType: DynamicInputComponent,
@@ -46,30 +41,53 @@ export default [
           validators: [Validators.minLength(3), Validators.email],
         },
       }),
-      createField<InputField>({
+      createField<InputPasswordField>({
+        colSize: 'ui-col-span-12 ',
+        controlType: InputPasswordComponent,
+        label: 'Custom password field',
+        options: {
+          formControlName: 'password',
+          value: 'Test',
+          disabled: false,
+          validators: [Validators.minLength(3), Validators.required, Validators.maxLength(10)],
+        },
+      }),
+    ],
+  }),
+  createField<FieldGroup>({
+    colSize: 'ui-col-span-12 sm:ui-col-span-4',
+    group: [
+      createField<UIElement>({
         colSize: 'ui-col-span-12',
+        controlType: TitleComponent,
+        data: {
+          title: 'About you',
+        },
+      }),
+      createField<SelectField>({
+        colSize: 'ui-col-span-12  sm:ui-col-span-6 ',
+        controlType: DynamicSelectComponent,
+        label: 'Favorite color',
+        selectOptions: [],
+        selectValue: 'id',
+        selectLabel: 'name',
+        options: {
+          formControlName: 'favoriteColor',
+          value: 1,
+          disabled: false,
+          validators: [Validators.required],
+        },
+      }),
+      createField<InputField>({
+        colSize: 'ui-col-span-12 sm:ui-col-span-6',
         controlType: DynamicInputComponent,
         label: 'Phone',
         options: {
-          formControlName: 'phone',
+          formControlName: 'nickname',
           value: '',
           validators: [Validators.minLength(3), Validators.pattern(/[0-9]/), Validators.required],
         },
       }),
     ],
-  }),
-  createField<SelectField>({
-    colSize: 'ui-col-span-12  sm:ui-col-span-4',
-    controlType: DynamicSelectComponent,
-    label: 'Favorite color',
-    selectOptions: [],
-    selectValue: 'id',
-    selectLabel: 'name',
-    options: {
-      formControlName: 'favoriteColor',
-      value: 1,
-      disabled: false,
-      validators: [Validators.required],
-    },
   }),
 ];

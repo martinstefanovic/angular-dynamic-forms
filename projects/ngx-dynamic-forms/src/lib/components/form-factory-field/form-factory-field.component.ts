@@ -13,7 +13,7 @@ import { AbstractControl, ControlContainer, FormGroup, FormGroupDirective } from
   ],
   template: ``,
 })
-export class CustomFieldComponent {
+export class FormFactoryFieldComponent {
   field = input<any>();
   public parentContainer = inject(ControlContainer);
 

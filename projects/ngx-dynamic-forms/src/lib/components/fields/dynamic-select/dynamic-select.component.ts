@@ -1,5 +1,5 @@
 import { Component, computed, effect, OnDestroy, OnInit, signal } from '@angular/core';
-import { CustomFieldComponent } from '../../custom-field/custom-field.component';
+import { FormFactoryFieldComponent } from '../../form-factory-field/form-factory-field.component';
 import { FieldErrorsComponent } from '../../field-errors/field-errors.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -42,7 +42,7 @@ import { FieldLabelComponent } from '../../field-label/field-label.component';
     <lib-field-errors [errors]="control?.errors" />
     }`,
 })
-export class DynamicSelectComponent extends CustomFieldComponent implements OnInit, OnDestroy {
+export class DynamicSelectComponent extends FormFactoryFieldComponent implements OnInit, OnDestroy {
   isOpen = signal(false);
   selected = signal<string | null>(null);
   dropdownOptions = computed(() => this.field()?.selectOptions);

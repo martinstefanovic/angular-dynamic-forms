@@ -1,7 +1,7 @@
 import { GenericField } from './generic-field.interface';
 
 export interface InputField extends GenericField {
-  type:
+  type?:
     | 'number'
     | 'text'
     | 'email'

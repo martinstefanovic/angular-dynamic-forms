@@ -1,6 +1,6 @@
 {
-  "name": "ngx-dynamic-forms",
-  "version": "0.0.1",
+  "name": "ngx-dynamic-forms-factory",
+  "version": "0.1.1",
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CustomFieldComponent } from '../../custom-field/custom-field.component';
+import { FormFactoryFieldComponent } from '../../form-factory-field/form-factory-field.component';
 import { CommonModule } from '@angular/common';
 import { ControlContainer, FormGroupDirective, ReactiveFormsModule } from '@angular/forms';
 import { FieldErrorsComponent } from '../../field-errors/field-errors.component';
@@ -28,4 +28,4 @@ import { FieldLabelComponent } from '../../field-label/field-label.component';
     }
   `,
 })
-export class DynamicInputComponent extends CustomFieldComponent {}
+export class DynamicInputComponent extends FormFactoryFieldComponent {}
