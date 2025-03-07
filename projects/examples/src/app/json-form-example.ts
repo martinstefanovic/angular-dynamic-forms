@@ -83,7 +83,7 @@ export default [
         controlType: DynamicInputComponent,
         label: 'Phone',
         options: {
-          formControlName: 'nickname',
+          formControlName: 'phone',
           value: '',
           validators: [Validators.minLength(3), Validators.pattern(/[0-9]/), Validators.required],
         },

@@ -1,3 +1,5 @@
+![Image](./projects/ngx-dynamic-forms//ngx-dynamic-form-factory.png)
+
 ## 📚 Table of Contents
 
 - [✅ Key Features](#-key-features)
