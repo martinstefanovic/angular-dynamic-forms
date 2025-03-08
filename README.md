@@ -11,6 +11,12 @@
 - [🌐 Using Aliases for Server-Provided JSON Configuration](#-using-aliases-for-server-provided-json-configuration)
   - [🔹 Example](#-example)
   - [🛠 Registering Aliases in `app.config.ts`](#-registering-aliases-in-appconfigts)
+- [📏 Responsive Grid System (`colSize` Classes)](#-responsive-grid-system-colsize-classes)
+  - [🔹 Column Sizing (1 to 12)](#-column-sizing-1-to-12)
+  - [📏 Responsive Breakpoints](#-responsive-breakpoints)
+- [📐 Grid System Configuration](#-grid-system-configuration)
+  - [🔹 Default Grid Configuration](#-default-grid-configuration)
+  - [🔹 Custom Grid Configuration (Tailwind, PrimeFlex, etc.)](#-custom-grid-configuration-tailwind-primeflex-etc)
 - [📄 Defining Form Fields in an External File](#-defining-form-fields-in-an-external-file)
 - [🛠 Built-in Example Fields & Custom Component Support](#-built-in-example-fields--custom-component-support)
 - [📌 Field Types and Examples](#-field-types-and-examples)
@@ -144,6 +150,91 @@ export const appConfig = {
 With this setup, any field with "controlType": "input" will automatically be rendered using MyCustomInputComponent.
 
 This approach is useful when working with server-driven forms, allowing you to configure forms dynamically without modifying frontend code.
+
+## 📏 Responsive Grid System (`colSize` Classes)
+
+The `colSize` property controls how form fields are positioned in a **responsive grid layout**. It follows a **12-column grid system**, like **Tailwind CSS**, but uses the prefix **`ui-`**.
+
+### **🔹 Column Sizing (1 to 12)**
+
+Each field can span between **1 and 12 columns** in the grid.
+
+| **Class**        | **Effect**                                             |
+| ---------------- | ------------------------------------------------------ |
+| `ui-col-span-1`  | The field spans **1** grid column.                     |
+| `ui-col-span-2`  | The field spans **2** grid columns.                    |
+| `ui-col-span-3`  | The field spans **3** grid columns.                    |
+| `ui-col-span-4`  | The field spans **4** grid columns.                    |
+| `ui-col-span-5`  | The field spans **5** grid columns.                    |
+| `ui-col-span-6`  | The field spans **6** grid columns (half of the grid). |
+| `ui-col-span-7`  | The field spans **7** grid columns.                    |
+| `ui-col-span-8`  | The field spans **8** grid columns.                    |
+| `ui-col-span-9`  | The field spans **9** grid columns.                    |
+| `ui-col-span-10` | The field spans **10** grid columns.                   |
+| `ui-col-span-11` | The field spans **11** grid columns.                   |
+| `ui-col-span-12` | The field takes the **full width** (12 columns).       |
+
+---
+
+### **📏 Responsive Breakpoints**
+
+You can make the field **adjust dynamically** across different screen sizes by adding **responsive prefixes**:
+
+| **Breakpoint**  | **Prefix** | **Example**                                           |
+| --------------- | ---------- | ----------------------------------------------------- |
+| **Small**       | `sm:`      | `sm:ui-col-span-6` (6 columns on small screens)       |
+| **Medium**      | `md:`      | `md:ui-col-span-4` (4 columns on medium screens)      |
+| **Large**       | `lg:`      | `lg:ui-col-span-3` (3 columns on large screens)       |
+| **Extra Large** | `xl:`      | `xl:ui-col-span-2` (2 columns on extra-large screens) |
+
+---
+
+## 📐 Grid System Configuration
+
+By default, this library **uses a 12-column grid system** to organize form fields in a **responsive layout**. The grid system applies to both **main forms** and **nested field groups**.
+
+---
+
+### **🔹 Default Grid Configuration**
+
+The default grid system uses **12 columns** and applies spacing between elements:
+
+```typescript
+grid: {
+  mainGridClassess: 'ui-grid ui-grid-cols-12 ui-gap-x-4 ui-gap-y-2',
+  nestedGridClassess: 'ui-grid ui-grid-cols-12 ui-gap-x-4 ui-gap-y-2',
+}
+```
+
+🏗 `mainGridClassess`→ Defines the grid layout for the entire form.
+📦 `nestedGridClassess` → Defines the grid layout for nested field groups inside the form.
+🔹 `ui-grid-cols-X` → X-column grid system (X can be number from 1 to 12).
+🔹 `ui-gap-x-4` → Horizontal spacing between columns.
+🔹 `ui-gap-y-2` → Vertical spacing between rows.
+
+### **🔹 Custom Grid Configuration (Tailwind, PrimeFlex, etc.)**
+
+If you do not want to use the library’s built-in grid system and prefer using Tailwind CSS, PrimeFlex, or another utility-based grid, you can override the default grid configuration.
+
+Modify your app.config.ts to provide your custom grid classes:
+
+```typescript
+import { provideFormFactoryConfig } from 'ngx-dynamic-forms-factory';
+
+export const appConfig = {
+  providers: [
+    provideFormFactoryConfig({
+      grid: {
+        mainGridClassess: 'grid grid-cols-10 gap-2', // Custom Tailwind
+        nestedGridClassess: 'grid grid-cols-6 gap-x-4 gap-y-2',
+      },
+    }),
+  ],
+};
+```
+
+If you override the grid system, you do not need the library’s CSS styles anymore.
+You can remove the default styles from `angular.json`.
 
 ## 📄 Defining Form Fields in an External File
 
