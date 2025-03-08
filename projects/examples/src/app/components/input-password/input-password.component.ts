@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { ControlContainer, FormGroupDirective, ReactiveFormsModule } from '@angular/forms';
 import { FormFactoryFieldComponent } from 'ngx-dynamic-forms';
 
 @Component({
   selector: 'app-input-password',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   styleUrl: './input-password.component.scss',
   template: `
     @if(field()){
@@ -26,6 +27,10 @@ import { FormFactoryFieldComponent } from 'ngx-dynamic-forms';
           }
         </button>
       </div>
+      <pre>
+       <!-- If you want to handle errors you can do that with the control property control?.errors -->
+        {{ control?.errors | json }}
+      </pre>
     </div>
     }
   `,
@@ -37,6 +42,9 @@ import { FormFactoryFieldComponent } from 'ngx-dynamic-forms';
   ],
 })
 export class InputPasswordComponent extends FormFactoryFieldComponent {
+  // ! IMPORTANT: You must provide the viewProviders like in this example
+  // ! to make the formControlName directive work properly
+
   showPassword = signal(false);
 
   togglePasswordVisibility() {
@@ -44,6 +52,8 @@ export class InputPasswordComponent extends FormFactoryFieldComponent {
   }
 
   updateValueManual(value: string) {
+    // If you don't want to use the formControlName directive
+    // you can update the value manually with this method
     this.updateValue(value);
   }
 }
