@@ -272,7 +272,7 @@ This library provides **two example field components** intended for **testing an
 If you want to **add your own custom components**, you can check out the example implementation here:
 🔗 **[Custom Components Example](https://github.com/martinstefanovic/angular-dynamic-forms/tree/master/projects/examples/src/app/components/input-password)**
 
-This guide explains how to create and register **custom form components** to extend the functionality of `ngx-dynamic-forms-factory`.
+This guide explains how to create and register **custom form components** to extend the functionality of `ngx-dynamic-forms-factory`. Also you can see how to implement error handling and manual value updating without formControlName.
 
 ## 📌 Field Types and Examples
 
