@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, ViewContainerRef, ViewEncapsulation, viewChild } from '@angular/core';
-import { DynamicInputComponent } from '../fields/dynamic-input/dynamic-input.component';
+import { Component, input } from '@angular/core';
 import { FieldRendererComponent } from '../fields/field-renderer/field-renderer.component';
 import { injectFormFactoryConfig } from '../../config/config.token';
 

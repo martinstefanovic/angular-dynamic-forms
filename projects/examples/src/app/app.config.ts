@@ -9,7 +9,10 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideFormFactoryConfig({
-      aliases: [{ component: DynamicInputComponent, alias: 'input' }],
+      grid: {
+        mainGridClassess: 'ui-grid ui-grid-cols-12 ui-gap-x-4 ui-gap-y-2',
+        nestedGridClassess: 'ui-grid ui-grid-cols-12 ui-gap-x-4 ui-gap-y-2',
+      },
     }),
   ],
 };
